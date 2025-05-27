@@ -7,3 +7,8 @@ google-api-python-client
 google-auth
 streamlit
 googletrans==4.0.0-rc1
+streamlit
+openai
+SpeechRecognition
+pyttsx3
+googletrans==4.0.0-rc1
