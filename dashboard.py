@@ -1,26 +1,13 @@
-# Placeholder for Streamlit dashboard showing query analytics
+# dashboard.py
 import streamlit as st
-import speech_recognition as sr
-import pyttsx3
-
-def speak(text):
-    engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
+from main import process_query
 
 st.title("🎓 Academic Advisor Voice Bot")
 
-if st.button("🎤 Start Voice Chat"):
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening...")
-        audio = recognizer.listen(source)
-        try:
-            query = recognizer.recognize_google(audio)
-            st.success(f"You said: {query}")
-            # Placeholder: you can call your advisor function here
-            response = f"You asked about: {query}"
-            st.write("Bot:", response)
-            speak(response)
-        except:
-            st.error("Sorry, I could not understand.")
+user_input = st.text_input("Ask a question about your schedule, exams, or meetings:")
+
+language = st.selectbox("Language", ["en", "ar", "hi"])
+
+if st.button("Submit"):
+    response = process_query(user_input, language=language)
+    st.write("🤖 Response:", response)
