@@ -1,10 +1,15 @@
+# Core libraries
 streamlit==1.33.0
 pandas==2.2.1
 numpy==1.26.4
 scikit-learn==1.4.2
 matplotlib==3.8.4
-openai
 flask
-googletrans==4.0.0rc1
+openai
+
+# Google APIs
 google-api-python-client
 google-auth
+
+# Translation (replaces googletrans to avoid httpx conflict)
+deep-translator==1.11.4
