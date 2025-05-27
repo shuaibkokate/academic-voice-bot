@@ -1,0 +1,3 @@
+student_id,intent,timestamp
+S101,schedule_query,2025-05-26 10:00
+S102,exam_query,2025-05-26 11:00
