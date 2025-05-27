@@ -1,0 +1,9 @@
+flask
+openai
+pandas
+SpeechRecognition
+pyttsx3
+google-api-python-client
+google-auth
+streamlit
+googletrans==4.0.0-rc1
