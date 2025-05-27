@@ -1,23 +1,13 @@
-flask
-openai
-pandas
-SpeechRecognition
-pyttsx3
-google-api-python-client
-google-auth
-streamlit
-googletrans==4.0.0-rc1
-streamlit
-openai
-SpeechRecognition
-pyttsx3
-googletrans==4.0.0-rc1
-pyaudio==0.2.13
+# Core dependencies
 streamlit==1.33.0
 pandas==2.2.1
 numpy==1.26.4
 scikit-learn==1.4.2
 matplotlib==3.8.4
-streamlit
-pandas
-numpy
+openai
+flask
+
+# Optional voice + translation (use with caution on Streamlit Cloud)
+google-api-python-client
+google-auth
+googletrans==4.0.0-rc1
